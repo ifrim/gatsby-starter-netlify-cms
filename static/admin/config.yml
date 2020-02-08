@@ -30,14 +30,23 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
-    label: "Pages2"
+    label: "Pages"
     files:
+      - file: "src/pages/homepage/index.copy.md"
+        label: "Homepage2"
+        name: "homepage2"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: "About Us", name: about_us, widget: text }
+          - {label: Image, name: image, widget: image}
+          - {label: "What We Do", name: what_we_do, widget: object, fields: [{label: "Description", name: description, widget: text}, {label: "Services", name: services, widget: list, fields: [{label: "Image", name: image, widget: image}, {label: "Name", name: name, widget: string}, {label: "Link", name: link, widget: string}]}]}
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
+          - {label: Title2, name: title2, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
@@ -48,6 +57,20 @@ collections:
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      # - file: "src/pages/homepage/index.md"
+      #   label: "Homepage"
+      #   name: "homepage"
+      #   fields:
+      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+      #     - {label: "Title", name: "title", widget: "string"}
+      #     - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/about/index.md"
+        label: "About3"
+        name: "about2"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
